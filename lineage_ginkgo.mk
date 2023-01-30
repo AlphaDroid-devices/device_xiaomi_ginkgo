@@ -23,8 +23,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from ginkgo device
 $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 
-# Inherit some common LineageOS stuff
+# Inherit some common AlphaDroid stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Alpha internal properties
+TARGET_ENABLE_BLUR := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_USE_PIXEL_LAUNCHER := false
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+ALPHA_MAINTAINER := Agatha
+
+# Gapps
+WITH_GAPPS := true
+TARGET_CORE_GAPPS := true
 
 # Device identifier
 PRODUCT_NAME := lineage_ginkgo
